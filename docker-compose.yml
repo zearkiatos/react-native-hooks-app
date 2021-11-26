@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: react-native-hooks-app
+    env_file:
+      - .env
     volumes: 
       - ".:/app"
     ports:
