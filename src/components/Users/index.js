@@ -8,9 +8,9 @@ const Users = () => {
     const [loading, setLoading] = useState(true);
     const fetchUsers = async () => {
         const userEvent = new UserEvent(new JsonPlaceholderApiUserRepository());
-        const users = await userEvent.getUsers();
-        setUsers(users);
-        users && setLoading(false);
+        const usersFetched = await userEvent.getUsers();
+        setUsers(usersFetched);
+        usersFetched && setLoading(false);
     };
     useEffect(() => {
         fetchUsers();

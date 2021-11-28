@@ -3,12 +3,15 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Counter from './src/components/Counter';
 import Users from './src/components/Users';
+import UseReducer from './src/components/UseReducer';
 
 export default function App() {
+  
   return (
     <View style={styles.container}>
       <Counter />
       <Users />
+      <UseReducer />
       <StatusBar style="auto" />
     </View>
   );
